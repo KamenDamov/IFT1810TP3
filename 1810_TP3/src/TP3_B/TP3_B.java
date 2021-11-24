@@ -1,3 +1,4 @@
+package TP3_B;
 
 public class TP3_B {
 	// 1: d`extraire de sous-chaines et d`afficher
