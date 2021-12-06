@@ -1,3 +1,14 @@
+/* Fichier : TestPersonne
+   Auteurs : Kamen Damov
+   			 Jie Wu 
+   Cours   : IFT 1810 section A
+   Trimestre : Automne 2021
+   But : Ce programme inclus la réponse de plusieurs exercices 
+   		d'affichage, extraction, compte, et autre avec la POO
+		en Java.
+   Derniere mise a jour : 05/12/2021               
+*/
+
 package TP3_C;
 
 import java.util.ArrayList;
@@ -7,8 +18,7 @@ class Personne {
 	private String naissance;
 	
 	private int nbCafe;
-	
-	// 
+
 	/*--------------------------------------------------
      Constructeur avec nbCafe auto defini
      Auteur: Kamen Damov
@@ -276,3 +286,6 @@ public class TestPersonne {
 		System.out.println("le nombre de personne qui sont nees au mois de mai est "+ TestPersonne.persMai(pers, nbPers));		
 	}
 }
+/*Exécution:
+A AJOUTER!
+*/
