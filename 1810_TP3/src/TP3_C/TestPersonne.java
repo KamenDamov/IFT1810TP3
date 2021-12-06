@@ -156,8 +156,8 @@ public class TestPersonne {
    */
    static  void afficher(Personne[] pers, int nbPers, String message)
     {
-    	System.out.println("\nIndice       Tableaux pers:     " + message);
-    	System.out.println("---------------------------------------------------");
+    	System.out.printf("\nIndice       Tableaux pers:     " + message);
+    	System.out.printf("---------------------------------------------------");
     	for(int i = 0; i < nbPers; i++)
     		if(pers[i].getNbCafe()<=0) 
     		{
@@ -202,7 +202,7 @@ public class TestPersonne {
 		   }
 	   }
 	   
-	   System.out.println("la personne qui consomme le plus cafe est ne "+pers[maxIndex].getNaissance()
+	   System.out.printf("la personne qui consomme le plus cafe est ne "+pers[maxIndex].getNaissance()
 			   +" , elle consomme " + maxCafe + " tasses par jour");
 	   
    }
@@ -283,7 +283,7 @@ public class TestPersonne {
 		TestPersonne.afficher(pers, nbPers, "apres la reduction");
 		
 		// compter le nombre de personne aui sont nees au mois de mai
-		System.out.println("le nombre de personne qui sont nees au mois de mai est "+ TestPersonne.persMai(pers, nbPers));		
+		System.out.printf("le nombre de personne qui sont nees au mois de mai est "+ TestPersonne.persMai(pers, nbPers));		
 	}
 }
 /*Exécution:
