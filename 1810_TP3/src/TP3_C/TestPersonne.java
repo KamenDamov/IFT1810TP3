@@ -3,24 +3,43 @@ package TP3_C;
 import java.util.ArrayList;
 
 class Personne {
-	
+	//Declaration des 2 parametres
 	private String naissance;
 	
 	private int nbCafe;
 	
-	// constructeur with self-defined nbCafe
+	// 
+	/*--------------------------------------------------
+     Constructeur avec nbCafe auto defini
+     Auteur: Kamen Damov
+     But : Defini les valeurs pour les parametres                             
+     Mise a jour : 05 12 2021
+	 --------------------------------------------------
+   */
 	public Personne(String date, int cafe) {
 		naissance = date;
 		nbCafe = cafe;
 	}
-	
-	
-	// constructeur with default nbCafe
+
+	/*--------------------------------------------------
+     Constructeur avec nbCafe
+     Auteur: Kamen Damov
+     But : Defini la valeur par defaut pour le nbCafe                             
+     Mise a jour : 05 12 2021
+	 --------------------------------------------------
+   */
 	public Personne(String date) {
 		naissance = date;
 		nbCafe = 1;
 	}
-	
+
+	/*--------------------------------------------------
+     Pour avoir et initialiser naissance
+     Auteur: Kamen Damov
+     But : Pour avoir et initialiser naissance                           
+     Mise a jour : 05 12 2021
+	 --------------------------------------------------
+   */
 	public String getNaissance() {
 		return naissance;
 	}
@@ -29,6 +48,13 @@ class Personne {
 		this.naissance = naissance;
 	}
 
+	/*--------------------------------------------------
+     Pour avoir et initialiser nbCafe
+     Auteur: Kamen Damov
+     But : Pour avoir et initialiser nbCafe                           
+     Mise a jour : 05 12 2021
+	 --------------------------------------------------
+   */
 	public int getNbCafe() {
 		return nbCafe;
 	}
@@ -37,44 +63,87 @@ class Personne {
 		this.nbCafe = nbCafe;
 	}
 	
+	/*
+	--------------------------------------------------
+     Pour avoir le nom du mois
+     Auteur: Kamen Damov
+     But : On doit en premier extraire la chaine de caracteres
+	 		qui represente le chiffre du mois, et ensuite lui 
+			 assigner la chaine de caracteres qui represente de 
+			 nom du mois.                          
+     Mise a jour : 05 12 2021
+	 --------------------------------------------------
+   */
 	public int rangMois()
     {
-    	return Integer.parseInt( naissance.substring(3,5)) ;
+    	return Integer.parseInt(naissance.substring(3,5)) ;
     }
 
     public String getMois()
     {
-    	String[] nomMois = { "Janvier", "Février", "Mars", "Avril", "Mai",
-    	                   "Juin", "Juillet", "Août", "Septembre",
-    	                   "Octobre", "Novembre", "Décembre"};
+    	String[] nomMois = { "janvier", "février", "mars", "avril", "mai",
+    	                   "juin", "juillet", "août", "septembre",
+    	                   "octobre", "novembre", "décembre"};
 
         // si rangMois() vaut 4, nomMois[4-1] vaut nomMois[3] vaut "Avril"
     	return nomMois[rangMois()-1];
-
     }
-
-  
+	
+	/*
+	--------------------------------------------------
+     Pour avoir le jour
+     Auteur: Kamen Damov
+     But : On choisit la partie de la chaine de carateres
+	 		qui represente le jour de naissance                          
+     Mise a jour : 05 12 2021
+	 --------------------------------------------------
+   */
     public int getJour()
 	{
 		return Integer.parseInt(naissance.substring(0,2));
 	}
-
-    
+   
+	/*
+	--------------------------------------------------
+     Pour avoir l'annee
+     Auteur: Kamen Damov
+     But : On choisit la partie de la chaine de carateres
+	 		qui represente l'annee de naissance                          
+     Mise a jour : 05 12 2021
+	 --------------------------------------------------
+   */
     public int getAnnee()
 	{
 		return  Integer.parseInt(naissance.substring(6));
 	}
 	
+	/*
+	--------------------------------------------------
+    La fonction pour afficher le resulat en bonne et due
+	a partir des constructeurs ci-haut. 
+     Auteur: Kamen Damov
+     But : Les constructeurs sont placés dans les strings                          
+     Mise a jour : 05 12 2021
+	 --------------------------------------------------
+   */
 	public void afficher(String titre) {
-		System.out.println(titre);
-		System.out.println("naissance : "+ getJour()+" "+getMois()+" "+getAnnee());
-		System.out.println("Cafe : "+ nbCafe + " tasse(s) par jour");
+		System.out.printf(titre);
+		System.out.printf("naissance : "+ getJour()+" "+getMois()+" "+getAnnee());
+		System.out.printf("Cafe : "+ nbCafe + " tasse(s) par jour");
 	}
 		
 }// fin Personne
 
 public class TestPersonne {
 	
+	/*
+	--------------------------------------------------
+     Fonction pour afficher le tableau
+     Auteur: Jie Wu
+     But : Afficher le tableau                          
+     Mise a jour : 05 12 2021
+	 --------------------------------------------------
+   */
    static  void afficher(Personne[] pers, int nbPers, String message)
     {
     	System.out.println("\nIndice       Tableaux pers:     " + message);
@@ -102,6 +171,15 @@ public class TestPersonne {
         System.out.printf("\n");
     }
 	
+	/*
+	--------------------------------------------------
+     Pour avoir l'annee
+     Auteur: Jie Wu
+     But : Avoir l'information de la personne qui a bu le plus
+	 		de cafe                          
+     Mise a jour : 05 12 2021
+	 --------------------------------------------------
+   */
    static void maxCafe(Personne[] pers, int nbPers) {
 	   int maxCafe = 0;
 	   int maxIndex=0;
@@ -118,7 +196,15 @@ public class TestPersonne {
 			   +" , elle consomme " + maxCafe + " tasses par jour");
 	   
    }
- 
+   
+   	/*
+	--------------------------------------------------
+     Pour avoir le tableau avec les cafés réduit
+     Auteur: Kamen Damov
+     But : On itère, et on réduit le nombre de café bu de 1                          
+     Mise a jour : 05 12 2021
+	 --------------------------------------------------
+   */
    static void reduire(Personne[] pers, int nbPers) {   
 	   for(int i = 0; i < nbPers; i++)
 	   {
@@ -129,11 +215,20 @@ public class TestPersonne {
 	   }
    }
    
+   	/*
+	--------------------------------------------------
+     Pour avoir la ou les personnes née en Mai
+     Auteur: Kamen Damov
+     But : On compte et retourne les gens avec mai 
+   			comme mois de naissance.
+     Mise a jour : 05 12 2021
+	 --------------------------------------------------
+   */
    static int persMai(Personne[] pers, int nbPers) {
 	   int nombre = 0;
 	   for(int i = 0; i < nbPers; i++)
 	   {
-		   if(pers[i].getMois()=="Mai")
+		   if(pers[i].getMois()=="mai")
 		   {
 			   nombre++;
 		   }
@@ -141,6 +236,15 @@ public class TestPersonne {
 	   return nombre;
    }
    
+   	/*
+	--------------------------------------------------
+     La fonction principale
+     Auteur: Kamen Damov
+     But :Afficher et presenter les informations voulues à
+   			partir des fonctions et constructeurs ci-haut
+     Mise a jour : 05 12 2021
+	 --------------------------------------------------
+   */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -163,17 +267,12 @@ public class TestPersonne {
 		TestPersonne.maxCafe(pers, nbPers);
 		
 		// reduire de 1 tasse de moins pour les personnes qui consomment de cafe
-				TestPersonne.reduire(pers, nbPers);
+		TestPersonne.reduire(pers, nbPers);
 				
 		// reafficher le tableau
 		TestPersonne.afficher(pers, nbPers, "apres la reduction");
 		
 		// compter le nombre de personne aui sont nees au mois de mai
-		System.out.println("le nombre de personne qui sont nees au mois de mai est "+ TestPersonne.persMai(pers, nbPers));
-		
-		
-		
-		
+		System.out.println("le nombre de personne qui sont nees au mois de mai est "+ TestPersonne.persMai(pers, nbPers));		
 	}
-
 }
