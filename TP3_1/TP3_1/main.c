@@ -1,12 +1,23 @@
-//
-//  main.c
-//  TP3_1
-//
-//  Created by Noelle Wu on 2021-11-07.
-//
+/* Fichier : main
+   Auteurs : Kamen Damov
+   			 Jie Wu 
+   Cours   : IFT 1810 section A
+   Trimestre : Automne 2021
+   But : Ce programme inclus la réponse de plusieurs exercices 
+   		d'affichage, compte, et autre en utilisant des fonctions
+        du langage C.
+   Derniere mise a jour : 05/12/2021               
+*/
 
 #include <stdio.h>
-// 1: d`afficher le contenu de ces trois tableaux avant le tri
+/*--------------------------------------------------
+Afficher les 3 tableaux
+Auteur: Kamen Damov
+But : d'afficher le contenu de ces trois tableaux 
+    avant le tri                            
+Mise a jour : 05 12 2021
+--------------------------------------------------
+*/
 void afficher(int age[], int nbCafe[], char poste[], int nbEmp, char quand[])
 {
    printf("Contenu de 3 tableaux %s selon les ages:\n", quand);
@@ -16,7 +27,14 @@ void afficher(int age[], int nbCafe[], char poste[], int nbEmp, char quand[])
    printf("\n")  ;
 }
 
-// 2: compter par une function avec return et ses appels pour afficher le nombre de P, A, O
+/*--------------------------------------------------
+Compter et afficher
+Auteur: Jie Wu
+But : compter par une function avec return et ses 
+    appels pour afficher le nombre de P, A, O                         
+Mise a jour : 05 12 2021
+--------------------------------------------------
+*/
 int nombre(char carValeur, char tableau[], int nbEmp)
 {
    int n = 0;
@@ -26,12 +44,16 @@ int nombre(char carValeur, char tableau[], int nbEmp)
     return n;
 }
 
-/*
-    3: compter par une fonction avec return et ses appels pour afficher le nombre demployer
-         age >=30 ans
-       et nbCafe >= 3
- 
- */
+/*--------------------------------------------------
+Compter et afficher selon les restrictions
+Auteur: Kamen Damov
+But :  compter par une fonction avec return et ses 
+        appels pour afficher le nombre demployer 
+        age plus grand ou égal a 30 ans et nbCafe
+        supérieur ou égal a 3                     
+Mise a jour : 05 12 2021
+--------------------------------------------------
+*/
 int nombreAvecSueil(int seuil, int tableau[], int nbEmp)
 {
    int n = 0;
@@ -41,7 +63,14 @@ int nombreAvecSueil(int seuil, int tableau[], int nbEmp)
     return n;
 }
 
-// 4: determiner par une fonction et d`afficher la valeur maximale
+/*--------------------------------------------------
+Fonction pour afficher la valeur maximale
+Auteur: Jie Wu
+But : determiner par une fonction et d`afficher 
+    la valeur maximale                    
+Mise a jour : 05 12 2021
+--------------------------------------------------
+*/
 int maxi(int tableau[], int nbElem)
 {
       int plusGrand = tableau[0] ;
@@ -51,7 +80,14 @@ int maxi(int tableau[], int nbElem)
       return plusGrand;
 }
 
-// 5: trier selon les ages et reafficher les 3 tableaux apres le tri
+/*--------------------------------------------------
+Trier selon les ages et reafficher
+Auteur: Kamen Damov
+But : trier selon les ages et reafficher les 3 tableaux 
+        apres le tri                    
+Mise a jour : 05 12 2021
+--------------------------------------------------
+*/
 void trier(int age[], int nbCafe[], char poste[], int nbEmp)
 {
     for (int i = 0; i < nbEmp-1; i++)
@@ -76,6 +112,15 @@ void trier(int age[], int nbCafe[], char poste[], int nbEmp)
          }
    }
 }
+
+/*--------------------------------------------------
+Fonction principale pour utiliser les fonctions créées
+ci-haut
+Auteur: Kamen Damov
+But : Pour appeler les fonctions ci-haut              
+Mise a jour : 05 12 2021
+--------------------------------------------------
+*/
 
 int main() {
     int age[] = {25, 19, 27, 30, 65, 24, 56, 29},

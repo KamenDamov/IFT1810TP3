@@ -76,7 +76,7 @@ class Personne {
 	/*
 	--------------------------------------------------
      Pour avoir le nom du mois
-     Auteur: Kamen Damov
+     Auteur: Jie Wu
      But : On doit en premier extraire la chaine de caracteres
 	 		qui represente le chiffre du mois, et ensuite lui 
 			 assigner la chaine de caracteres qui represente de 
@@ -184,7 +184,7 @@ public class TestPersonne {
 	/*
 	--------------------------------------------------
      Pour avoir l'annee
-     Auteur: Jie Wu
+     Auteur: Kamen Damov
      But : Avoir l'information de la personne qui a bu le plus
 	 		de cafe                          
      Mise a jour : 05 12 2021
@@ -210,7 +210,7 @@ public class TestPersonne {
    	/*
 	--------------------------------------------------
      Pour avoir le tableau avec les cafés réduit
-     Auteur: Kamen Damov
+     Auteur: Jie Wu
      But : On itère, et on réduit le nombre de café bu de 1                          
      Mise a jour : 05 12 2021
 	 --------------------------------------------------
@@ -249,7 +249,7 @@ public class TestPersonne {
    	/*
 	--------------------------------------------------
      La fonction principale
-     Auteur: Kamen Damov
+     Auteur: Kamen Damov et Jie Wu
      But :Afficher et presenter les informations voulues à
    			partir des fonctions et constructeurs ci-haut
      Mise a jour : 05 12 2021
